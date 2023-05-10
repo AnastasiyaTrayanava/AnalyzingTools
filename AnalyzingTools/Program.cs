@@ -55,7 +55,6 @@ namespace AnalyzingTools
         }
 
         public static string GeneratePasswordHashUsingSalt(string passwordText, byte[] salt)
-
         {
             var pbkdf2 = new Rfc2898DeriveBytes(passwordText, salt, _iterationCount);
             var hash = pbkdf2.GetBytes(20);
